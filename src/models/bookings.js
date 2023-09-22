@@ -1,3 +1,4 @@
+const { unique } = require("jquery");
 const mongoose = require("mongoose");
 
 const bookingSchema = mongoose.Schema({
@@ -32,7 +33,8 @@ const bookingSchema = mongoose.Schema({
     },
     time : {
         type:String,
-        required:true
+        required:true,
+        unique: true
     },
     note : {
         type:String,
